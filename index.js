@@ -31,7 +31,6 @@
 			cursorDifference = cursorInital - cursorPos;
 			checkLimit(e);
 			container.scroll(cursorDifference, 0);
-			console.log(cursorInital, cursorPos, cursorDifference);
 		}
 	});
 
