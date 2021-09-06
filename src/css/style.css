@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -9,22 +10,70 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  overflow-x: hidden;
+}
+
+.click-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 5rem 0;
 }
 
-.container {
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.click-container .btn {
+  margin: 1rem;
+  padding: 1rem;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.click-container .btn:hover {
+  background-color: lightblue;
+}
+
+.click-container .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  max-width: 1200px;
+  height: 65vh;
+  position: relative;
+}
+
+.click-container .image-container .img {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  min-width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.drag-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,12 +83,19 @@ body {
   -ms-flex-item-align: center;
       align-self: center;
   width: 90%;
-  height: 300px;
+  min-height: 300px;
+  margin: 5rem 0;
   overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: lightcoral;
 }
 
-.container .item {
+.drag-container .item {
   margin: 10px;
   min-width: 300px;
   height: 240px;

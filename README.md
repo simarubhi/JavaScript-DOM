@@ -2,8 +2,8 @@
 
 _**Note:** Primary code located in index.js_
 
-## Drag Scroll Bar
+## Image Slide Show & Drag Scroll Bar
 
-![Drag Scroll Bar Demo](drag_scroll_demo.gif)
+![Demo](demo.gif)
 
-### Currently under construction :construction_worker: :construction: :building_construction:
+### Further Features Currently under construction :construction_worker: :construction: :building_construction:
