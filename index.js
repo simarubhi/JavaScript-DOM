@@ -1,3 +1,26 @@
+// 3D Card
+(function () {
+	const cardOrigin = document.querySelector('.card-origin');
+	const card = document.querySelector('.card');
+	let yTilt = 0;
+	let xTilt = 0;
+
+	cardOrigin.addEventListener('mousemove', e => {
+		console.log(e.offsetX, e.offsetY);
+
+		yTilt = `${((-200 + e.offsetX) / 200) * 25}deg`;
+
+		xTilt = `${((-250 + e.offsetY) / -250) * 25}deg`;
+
+		card.style.transform = `rotateX(${xTilt}) rotateY(${yTilt}`;
+	});
+
+	cardOrigin.addEventListener('mouseleave', () => {
+		card.style.transform = 'rotateY(0) rotateX(0)';
+	});
+})();
+
+// Image Slide Show
 (function () {
 	const images = document.querySelectorAll('.img');
 	const prevBtn = document.querySelector('.prev');
@@ -39,6 +62,7 @@
 	});
 })();
 
+// Drag Scroll Bar
 (function () {
 	const container = document.querySelector('.drag-container');
 
